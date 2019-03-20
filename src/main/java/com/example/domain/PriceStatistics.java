@@ -1,10 +1,10 @@
 package com.example.domain;
 
 public class PriceStatistics {
-   private String marca;
-   private double average;
-   private double min;
-   private double max;
+    private String marca;
+    private double average;
+    private double min;
+    private double max;
 
     public PriceStatistics(String marca, double average, double min, double max) {
         this.marca = marca;

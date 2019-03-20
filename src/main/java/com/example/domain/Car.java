@@ -1,6 +1,9 @@
 package com.example.domain;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Car {
@@ -22,7 +25,7 @@ public class Car {
         this.model = model;
         this.yearOfFab = yearOfFab;
         this.plateNumber = plateNumber;
-        this.price=price;
+        this.price = price;
     }
 
     public Car() {
@@ -93,10 +96,10 @@ public class Car {
                 ", yearOfFab=" + yearOfFab +
                 ", plateNumber='" + plateNumber + '\'' +
                 ", price=" + price +
-                '}'+System.lineSeparator();
+                '}' + System.lineSeparator();
     }
 
-    public int compareTo(Car anotherCar){
+    public int compareTo(Car anotherCar) {
 
         // System.out.println("Comparing the following two cars: ");
         // System.out.println(this);

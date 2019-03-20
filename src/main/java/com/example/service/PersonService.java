@@ -13,7 +13,7 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public void testPeople(){
+    public void testPeople() {
         Person person1 = new Person();
         person1.setName("Ivan");
         person1.setAge(36);
@@ -27,7 +27,7 @@ public class PersonService {
         person2.setBirthday(LocalDate.of(1995, 1, 1));
         personRepository.save(person2);
 
-        Person person3 =new Person();
+        Person person3 = new Person();
         person3.setName("Noelia");
         person3.setSurname("Villa");
         person3.setAge(25);
@@ -73,14 +73,14 @@ public class PersonService {
         System.out.println(personRepository.findByAgeGreaterThanEqual(23));
         System.out.println("All the people called Noelia Villa are: ");
         System.out.println(
-                personRepository.findByNameAndSurname("Noelia","Villa"));
+                personRepository.findByNameAndSurname("Noelia", "Villa"));
 
         System.out.println("All people named Noelia or with surname Villa are the following: ");
         System.out.println(
-                personRepository.findByNameOrSurname("Noelia","Villa"));
+                personRepository.findByNameOrSurname("Noelia", "Villa"));
 
         System.out.println("All people that were born after 1994:");
-        System.out.println(personRepository.findByBirthdayAfter(LocalDate.of(1994,1,1)));
+        System.out.println(personRepository.findByBirthdayAfter(LocalDate.of(1994, 1, 1)));
 
     }
 }
