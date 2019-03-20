@@ -68,7 +68,7 @@ public class Car {
     }
 
     public void setPlateNumber(String plateNumber) {
-        plateNumber = plateNumber;
+        this.plateNumber = plateNumber;
     }
 
     public double getPrice() {
