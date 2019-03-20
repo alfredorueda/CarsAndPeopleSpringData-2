@@ -10,8 +10,12 @@ import java.time.LocalDate;
 
 @Service
 public class PersonService {
+    private final PersonRepository personRepository;
+
     @Autowired
-    private PersonRepository personRepository;
+    public PersonService(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     public void testPeople() {
         Person person1 = new Person();

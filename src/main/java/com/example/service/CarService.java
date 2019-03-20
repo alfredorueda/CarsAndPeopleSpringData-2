@@ -14,11 +14,15 @@ import java.util.List;
 @Service
 public class CarService {
 
-    @Autowired
-    private CarRepository carRepository;
+    private final CarRepository carRepository;
+
+    private final PersonRepository personRepository;
 
     @Autowired
-    private PersonRepository personRepository;
+    public CarService(CarRepository carRepository, PersonRepository personRepository) {
+        this.carRepository = carRepository;
+        this.personRepository = personRepository;
+    }
 
 
     public void testCars() {
